@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Century;
+ }
+ abbr{
+    text-decoration: none; 
+ }
+
+ header{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../WEB/CpA4oUcW8AA-HHR.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+ }
+ ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 30px;
+    min-height: 400px;
+    margin-right: 40px;
+    font-size: 16px;
+ }
+ ul li{
+    display: inline-block;
+ }
+ ul li a{
+    text-decoration: none;
+    color: pink;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5 ease;
+ }
+ ul li a:hover{
+    background-color:white;
+    color:rgb(83, 128, 0);
+ }
+ ul li.active a{
+    border-color:white;
+    color: rgb(83, 128, 0);
+ }
+  .logo img{
+    float: left;
+    width: 150px;
+    height: auto;
+  }
+  .main{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .title{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .title h1{
+    color: whitesmoke;
+    font-size: 70px;
+  }
+  .button{
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .btn{
+    border: 1px solid burlywood;
+    padding: 5px 20px;
+    color: bisque;
+    transition: 0.5 ease;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  .btn:hover{
+    background-color: antiquewhite;
+    color: rgb(90, 215, 90);
+  }
+
+  .sub-menu{
+    display: none;
+    top: 6%;
+    position: relative;
+  }
+
+  .sub-menu ul{
+    position: absolute;
+  }
+
+  .main ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background-color: aqua;
+    margin-top: 12px;
+    margin-left: -8px;
+  }
+
+  .main ul li:hover .sub-menu ul{
+    display: block;
+    margin: 6px;
+  }
+
+  .mainul li:hover .sub-menu ul li{
+    width: 75px;
+    padding: 5px;
+    border-bottom: 1px  whitesmoke;
+    background: transparent;
+    transition: 0.4 ease;
+    text-align: left;
+    border-radius: 0px;
+  }
