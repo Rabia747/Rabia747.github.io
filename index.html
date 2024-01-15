@@ -1,72 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3Gİstanbul</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-</head>
-<body>
-    <header>
-        <div class="main">
-            <dir class="logo">
-                <img src="Travel.png">
-            </dir>
-            <ul>
-                <li class="active"><a href="#"><i class="fa-solid fa-house"></i>Anasayfa</a>
-                    <div class="sub-menu">
-                        <ul>
-                            <li><a href="#">GirişYap</a></li>
-                        </ul>
-                    </div></li>
-                <li><a href="#"><i class="fa-solid fa-person-walking-luggage"></i>Gezi Rotaları</a>
-                    <div class="sub-menu">
-                        <ul>
-                            <li><a href="#">Koylar</a></li>
-                            <li><a href="#">Körfezler</a></li>
-                            <li><a href="#">AntikYerler</a></li>
-                        </ul>
-                    </div></li>
-                <li><a href="#"><i class="fa-solid fa-utensils"></i>Lezzet Durakları</a>
-                    <div class="sub-menu">
-                        <ul>
-                            <li><a href="#">EvYemeği</a></li>
-                            <li><a href="#">FastFood</a></li>
-                            <li><a href="#">SokakLezzetleri</a></li>
-                            <li><a href="#">Yöresel</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#"><i class="fa-solid fa-bed"></i>Konaklama</a>
-                <div class="sub-menu">
-                    <ul>
-                        <li><a href="#">Oteller</a></li>
-                        <li><a href="#">Pansiyonlar</a></li>
-                        <li><a href="#">Bungalovlar</a></li>
-                        <li><a href="#">Evler</a></li>
-                    </ul>
-                </div></li>
-                <li><a href="#"><i class="fa-solid fa-bars"></i>Hakkımızda</a>
-                <div class="sub-menu">
-                    <ul>
-                        <li><a href="#">Resimler</a></li>
-                        <li><a href="#">Bilgi</a></li>
-                        <li><a href="#">İletişim</a></li>
-                    </ul>
-                </div>
-            </li>
-            </ul>
-        </div>
-        <div class="title">
-            <h1><abbr title="Gez Gör Geliş">3Gİstanbul</abbr></h1>
-        </div>
-        <div class="button">
-            <a href="#" class="btn">DOĞA HARİKALARI</a>
-            <a href="#" class="btn">ANTİK YERLER</a>
-            <a href="#" class="btn">PLAJ VE SAHİLLER</a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3GİSTANBUL</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="icon" type="image.png" sizes="32x32" href="img/favicon.png" />
+  </head>
+  <body
+    onload='if (window.location.href.substr(window.location.href.length - 6) == "#about") { introAboutLogoTransition(); }'
+  >
+    <!--navbar kısmı-->
+    <nav class="navbar glass" style="height: 70px">
+      <span
+        ><a href="#home" style="display: flex; align-items: center"
+          ><img
+            class="img2"
+            src="./img/favicon.png"
+            width="40"
+            style="margin: -25px -10px -25px -20px"
+          />
+          <h1 class="logo">&nbsp;3GİSTANBUL</h1></a
+        ></span
+      >
+      <ul class="nav-links">
+        <li>
+          <a href="#home" id="pri" class="active cir_border">Anasayfa</a>
+        </li>
+        <li><a href="#events" id="sec" class="cir_border">GeziRotaları</a></li>
+        <li>
+          <a href="#explore" id="tri" class="cir_border">LezzetDurakları</a>
+        </li>
+        <li>
+          <a href="#tours" id="quad" class="cir_border">Konaklama</a>
+        </li>
+        <li><a href="#about" id="quint" class="cir_border">Hakkımızda</a></li>
+        <li>
+          <a href="#contact" id="hept" class="cir_border">İletişim</a>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" class="checkbox dark" id="checkbox" />
+            <label for="checkbox" class="label">
+              <i class="fa fa-moon-o"></i>
+              <i class="fa fa-sun-o"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
+      <img src="./img/menu-btn.png" alt="" class="menu-btn" />
+    </nav>
+    <!--navbar kısmı-->
+
+    <header id="home">
+      <div class="header-content">
+        <h2 id="quote">İstanbul'u Yakından Tanıyın</h2>
+        <div class="line"></div>
+        <h1>DOĞA HARİKALARI</h1>
+        <a
+          href="#about"
+          class="ctn"
+          onclick='removeall(); $("#quad").css("border", "2px solid whitesmoke"); $("#quad").css("border-radius", "20px");'
+          >Daha Fazla</a
+        >
+      </div>
     </header>
-    
-</body>
+
+    <!--Gezilecek alanlar-->
+    <section class="events" id="events">
+      <div class="container">
+        <div class="title">
+          <h1 class="dark">Nasıl Bir Yer Gezmek İstersiniz?</h1>
+          <div class="line"></div>
+        </div>
+        <div class="row">
+          <article class="card col">
+            <img class="card-img" src="./img/ada.png" />
+            <h4 class="dark">Adalar</h4>
+            <p class="font-color">
+              İstanbul'un birbirinden güzel, birçok etkinliği yapabileceğiniz,
+              denizi, doğayı, temiz havayı bir arada bulabileceğiniz adaları.
+            </p>
+            <a href="#!" class="ctn" onclick="toggleOptions('adalarOptions')">Seçenekler</a>
+            <div id="adalarOptions" class="options" style="display: none;">
+              <ul>
+                <li>Büyükada</li>
+                <li>Heybeliada</li>
+                <li>Kınalıada</li>
+                <li>Burgazada</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card col">
+            <img src="./img/imgr3.jpg" />
+            <h4 class="dark">Kumsallar</h4>
+            <p class="font-color">
+              İstanbul'un her kesimden insanın rahat edebileceği, huzur veren
+              manzarayı izlemesi, fotoğraf çekmesi, güneşlenmesi keyifli
+              birbirinden güzel plaj ve kumsalları.
+            </p>
+            <a href="#!" class="ctn" onclick="toggleOptions('KumsallarOptions')">Seçenekler</a>
+            <div id="kumsallarOptions" class="options" style="display: none;">
+              <ul>
+                <li>Poyrazköy</li>
+                <li>Şile</li>
+                <li>Burc</li>
+                <li>Caddebostan</li>
+              </ul>
+            </div>
+          </article>
+          <article class="card col">
+            <img src="./img/imgr5.jpg" />
+            <h4 class="dark">Ormanlar</h4>
+            <p class="font-color">
+              Şehrin gürültüsünden uzak sizi temiz havası, seyir zevki veren
+              manzarası ve ailenizle vakit geçireceğiniz etkinliklik alanlarıyla
+              karşılayan İstanbul' un muhteşem ormanları.
+            </p>
+            <a href="#!" class="ctn" onclick="toggleOptions('OrmanlarOptions')">Seçenekler</a>
+            <div id="ormanlarOptions" class="options" style="display: none;">
+              <ul>
+                <li>Atatürk Arboretumu</li>
+                <li>Belgrad Ormanı</li>
+                <li>Polonezköy Tabiat Parkı</li>
+                <li>Kemerburgaz Kent Ormanı</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!--Gezilecek alanlar-->
+
+    <!--Yemek kısmı-->
+    <section class="explore" id="explore">
+      <div class="explore-content">
+        <h1>YEMEDEN OLMAZ!</h1>
+        <div class="line"></div>
+        <p>
+          Gez-Gör-Geliş(3G) sloganımızla İstanbul'un doğa harikalarını
+          keşfederken acıkman çok normal, yemek yemek için mekan armakla uğraşma
+          hadi lezzet duraklarını incele ve yeniden gezi rotanı güncelle.
+        </p>
+        <a href="#" class="ctn">Daha Fazla</a>
+      </div>
+    </section>
+    <!--Yemek kısmı-->
+
+    <!--Konaklama-->
+    <section class="tours" id="tours">
+      <div class="container row">
+        <div class="col content-col">
+          <h1 class="font-color">KONFORLA KONAKLA</h1>
+          <div class="line"></div>
+          <p>
+            Yoğun bir gezi rotasının ardından rahatça dinlenmeye ihtiyacın var.
+            Konforlu konaklama mekanlarını incele ve sana en uygun olanlarda
+            geceni dinlenerek geçir.
+          </p>
+          <a href="#" class="ctn">Daha Fazla</a>
+        </div>
+        <div class="image-col">
+          <div class="image-gallery">
+            <img src="./img/konak1.jpeg" alt="konaklama fotoğraf" />
+            <img src="./img/konak3.webp" alt="konaklama fotoğraf" />
+            <img src="./img/konak4.jpg" alt="konaklama fotoğraf" />
+            <img src="./img/konak2.jpg" alt="konaklama fotoğraf" />
+          </div>
+        </div>
+      </div>
+      <br /><br /><br /><br />
+    </section>
+    <!--Konaklama-->
+
+    <!-- Anasayfa kısmı -->
+    <section id="about">
+      <div class="title">
+        <h1 class="font-color">Hakkımızda</h1>
+        <div class="line"></div>
+      </div>
+      <br />
+      <div id="about_us">
+        <div class="boxx">
+          <div class="containerx">
+            <input type="radio" name="slider" id="item-1" checked />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <div class="cards">
+              <label class="cardt" for="item-1" id="col-img-1">
+                <img src="./img/hak1.jpg" />
+              </label>
+              <label class="cardt" for="item-2" id="col-img-2">
+                <img src="./img/hak2.jpg" />
+              </label>
+              <label class="cardt" for="item-3" id="col-img-3">
+                <img src="./img/hak3.jpg" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Anasayfa kısmı -->
+    <!--Form kısmı-->
+    <section id="contact">
+      <div class="title">
+        <h1 class="font-color">İletişim</h1>
+        <div class="line"></div>
+      </div>
+      <div class="contact_us">
+        <form class="cform" action="" method="post">
+          <div class="crow-message">
+            <h1 class="color">Bir mesaj bırakın.</h1>
+            <div></div>
+          </div>
+          <div class="crow-in">
+            <input type="text" id="name" name="name" placeholder="Adın" />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Mail adresin"
+            />
+          </div>
+          <div class="crow">
+            <div class="ccol-left">
+              <select name="country" id="country">
+                <option value="Türkiye">Türkiye</option>
+                <option value="Korea">Korea</option>
+                <option value="Russia">Russia</option>
+                <option value="USA">USA</option>
+                <option value="Japan">Japan</option>
+                <option value="Germany">Germany</option>
+                <option value="Arabic">Arabic</option>
+              </select>
+            </div>
+          </div>
+          <div class="crow">
+            <div class="ccol-left">
+              <textarea
+                type="text"
+                id="remarks"
+                name="remarks"
+                placeholder="Fikirlerini bizimle paylaş..."
+                style="height: 150px"
+              ></textarea>
+            </div>
+          </div>
+          <input class="crow-s" type="submit" value="Gönder" />
+        </form>
+        <div class="cbox">
+          <div>
+            <p class="cbox-message">
+              Görüş ve önerilerinizi bizimle <br />
+              paylaşmaya ne dersiniz?<br />Hemen mail atabilirsiniz.
+            </p>
+            <div class="cbox-line"></div>
+          </div>
+          <div class="c_boxx">
+            <a href="mailto:abc@gmail.com"
+              ><i class="fa fa-envelope"></i>
+              Mail: rabiagunes@stu.topkapi.edu.tr
+            </a>
+          </div>
+          <div class="c_boxx">
+            <a href="tel:+91-12345-67890"
+              ><i class="fa fa-phone"></i>
+              Telefon:(+90) 212 777 44 55
+            </a>
+          </div>
+          <div class="c_boxx">
+            <a href="#"
+              ><i class="fa fa-map-marker"></i>
+              Konum: Altunizade, Üsküdar/İstanbul
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <i class="arrow" onclick="topFunction()" id="upbtn"></i>
+    <!--Form kısmı-->
+    <!--Footer kısmı-->
+    <section class="footer">
+      <span
+        >Rabia GÜNEŞ tarafından yapıldı. | &#169; Tüm hakları saklıdır.
+        2023</span
+      >
+    </section>
+    <!--Footer kısmı-->
+
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navlinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navlinks.classList.toggle("mobile-menu");
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
